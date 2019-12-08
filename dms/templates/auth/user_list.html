@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Document groups: </h2>
+    <ul class="list-group">
+        {% for user in object_list %}
+
+                <li class="list-group-item">{{ user.username }}
+                <a class="btn btn-secondary" href="/user-list/{{user.id}}">Explore</a>
+                <a class="btn btn-primary" href="/user-list/{{user.id}}">Edit name</a>
+                <a class="btn btn-danger" href="/user-delete/{{user.id}}">Delete</a>
+                </li>
+
+        {% endfor %}
+    </ul>
+
+    <a class="btn btn-primary" href="/user-create/">Add new user</a>
+
+{% endblock %}

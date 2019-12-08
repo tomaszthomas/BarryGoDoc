@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+    <div class="jumbotron">
+<div class="float-right"><img src="{% static '/img/logo.png' %}" alt="logo" height="300"></div>
+      <h1 class="display-4">BarryGoDoc </h1>
+      <p class="lead"> DMS systems embedding features like: </p>
+      <hr class="my-6 w-50">
+        <li> Creating document groups </li>
+        <li> Uploading document to groups </li>
+        <li> Deleting documents </li>
+        <li> Updating documents </li>
+        <li> Displaying documents </li>
+        <br>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Explore documents now!</a>
+    </div>
+    <div> </div>
+    <ul>
+
+    </ul>
+{% endblock %}

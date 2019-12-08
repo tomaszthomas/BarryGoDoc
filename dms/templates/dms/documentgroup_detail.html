@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Document groups: </h2>
+    <ul>
+        {% for document in object.document_set.all %}
+            <ul class="list-group">
+                <li class="list-group-item ">{{ document.name }}
+                    <a class="btn btn-secondary" href="/document-upload">Upload</a>
+                    <a class="btn btn-primary" href="/document-preview/{{document.id}}">Preview</a>
+                    <a class="btn btn-danger" href="/document-delete/{{document.id}}">Delete</a>
+                </li>
+            </ul>
+
+        {% endfor %}
+    </ul>
+{% endblock %}
+
