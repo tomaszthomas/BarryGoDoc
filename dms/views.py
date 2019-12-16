@@ -95,7 +95,6 @@ class UserCreateView(CreateView):
     fields = ['username', 'password', 'email', 'first_name', 'last_name']
 
     def form_valid(self, form):
-        import pdb; pdb.set_trace()
         User.objects.create_user(
             email=form.cleaned_data['email'],
             password=form.cleaned_data['password'],
@@ -152,5 +151,7 @@ def logoutUser(request):
     messages.info(request, "Logged out")
     logout(request)
     return redirect("about")
+
+
 
 
